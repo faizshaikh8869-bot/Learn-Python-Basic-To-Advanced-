@@ -1,200 +1,200 @@
 
 
-# # ---------------- Controll flow With For ----------------
+# ---------------- Controll flow With For ----------------
  
-# users = {'Hans': 'active', 'Éléonore': 'inactive', '景太郎': 'active'}
+users = {'Hans': 'active', 'Éléonore': 'inactive', '景太郎': 'active'}
 
-# # Stratagy 1:- Iterate Over a Copy 
-# # for user,status in users.copy().items():
-# #     if status == 'inactive':
-# #         del users[user]
+# Stratagy 1:- Iterate Over a Copy 
+# for user,status in users.copy().items():
+#     if status == 'inactive':
+#         del users[user]
 
-# # Stratagy 2:- Create a new Collection
-# active_users = {}
+# Stratagy 2:- Create a new Collection
+active_users = {}
 
-# for user, status in users.items():
-#     if status == 'active':
-#         active_users[user] = status
+for user, status in users.items():
+    if status == 'active':
+        active_users[user] = status
 
-# print(active_users)
-# print(users)
+print(active_users)
+print(users)
 
-# # ---------------- With Range ----------------
+# ---------------- With Range ----------------
 
-# sample = list(range(5, 105, 5))
-# print(sample)
-
-
-# a = ['Mary', 'had', 'a', 'little','lamb']
-
-# for i in range(len(a)):
-#     print(i, a[i])
-
-# #---------------- Brake and Continue ---------------- 
-
-# for n in range(2, 10):
-#     for i in range(2, n):
-#         if n % i == 0:
-#             print(f"{n} equals {i} * {n//i}")
-#             break
-# print('\n')
-
-# for n in range(2, 10):
-#     if n % 2 == 0:
-#         print(f"FOUND EVEN NUM {n}")
-#         continue
-#     print(f"Oh!!! Shit, ODD NUM {n}")
-
-# #---------------- Exception Handling ----------------
-
-# for num in range(1,5):
-#     try:
-#         x = int(input("Enter a num:- "))
-#         break
-#     except ValueError:
-#         print("Fuck You 🤟")
-
-# from enum import Enum
-# #---------------- match and enum----------------
-# """
-# Its look's like switch in Other Language 
-#     But 
-# it's more similar to pattern matching in languages like Rust or Haskell.
-# """
-
-# class Color(Enum):
-#     RED = 'r'
-#     GREEN = 'g'
-#     BLUE = 'b'
-
-# color = Color(input("Enter Your Color 'r,g or b': "))
-
-# match color:
-#     case Color.RED:
-#         print("you like RED")
-#     case Color.BLUE:
-#         print("you like BLUE")
-#     case Color.GREEN:
-#         print("you like GREEN")
-#     case _:
-#         print("Not a Valid Color")
-#         # raise ValueError("Not a Color")
-
-# #---------------- Function ----------------
-# """
-#  you might object that fib is not a function but a procedure since it doesn’t return a value. In fact, even functions without a return statement do return a value, albeit a rather boring one. This value is called None (it’s a built-in name). Writing the value None is normally suppressed by the interpreter if it would be the only value written. You can see it if you really want to using print()
-# """
-
-# def fib(n):
-#     global c 
-#     a,b = 0,1   #Local Variable 
-
-#     c = 23      #Global Variable 
-#     while a < n:
-#         print(a, end=' ')
-#         a,b = b, a+b
-#     print() # Return null 
+sample = list(range(5, 105, 5))
+print(sample)
 
 
-# fib(1000)
-# print(c)
-# fib(0)
+a = ['Mary', 'had', 'a', 'little','lamb']
+
+for i in range(len(a)):
+    print(i, a[i])
+
+#---------------- Brake and Continue ---------------- 
+
+for n in range(2, 10):
+    for i in range(2, n):
+        if n % i == 0:
+            print(f"{n} equals {i} * {n//i}")
+            break
+print('\n')
+
+for n in range(2, 10):
+    if n % 2 == 0:
+        print(f"FOUND EVEN NUM {n}")
+        continue
+    print(f"Oh!!! Shit, ODD NUM {n}")
+
+#---------------- Exception Handling ----------------
+
+for num in range(1,5):
+    try:
+        x = int(input("Enter a num:- "))
+        break
+    except ValueError:
+        print("Fuck You 🤟")
+
+from enum import Enum
+#---------------- match and enum----------------
+"""
+Its look's like switch in Other Language 
+    But 
+it's more similar to pattern matching in languages like Rust or Haskell.
+"""
+
+class Color(Enum):
+    RED = 'r'
+    GREEN = 'g'
+    BLUE = 'b'
+
+color = Color(input("Enter Your Color 'r,g or b': "))
+
+match color:
+    case Color.RED:
+        print("you like RED")
+    case Color.BLUE:
+        print("you like BLUE")
+    case Color.GREEN:
+        print("you like GREEN")
+    case _:
+        print("Not a Valid Color")
+        # raise ValueError("Not a Color")
+
+#---------------- Function ----------------
+"""
+ you might object that fib is not a function but a procedure since it doesn’t return a value. In fact, even functions without a return statement do return a value, albeit a rather boring one. This value is called None (it’s a built-in name). Writing the value None is normally suppressed by the interpreter if it would be the only value written. You can see it if you really want to using print()
+"""
+
+def fib(n):
+    global c 
+    a,b = 0,1   #Local Variable 
+
+    c = 23      #Global Variable 
+    while a < n:
+        print(a, end=' ')
+        a,b = b, a+b
+    print() # Return null 
 
 
-# """
-# A method is a function that ‘belongs’ to an object and is named obj.methodname, where obj is some object (this may be an expression), and methodname is the name of a method that is defined by the object’s type.
-# """
-# def fib2(n):
+fib(1000)
+print(c)
+fib(0)
 
-#     a,b = 0,1
-#     results = []
 
-#     while a < n:
-#         results.append(a)
-#         a,b = b, a+b
+"""
+A method is a function that ‘belongs’ to an object and is named obj.methodname, where obj is some object (this may be an expression), and methodname is the name of a method that is defined by the object’s type.
+"""
+def fib2(n):
 
-#     return results
+    a,b = 0,1
+    results = []
 
-# lists = fib2(100)
-# print(lists)
+    while a < n:
+        results.append(a)
+        a,b = b, a+b
 
-# #---------------- Default Arguments ----------------
+    return results
 
-# # Prompt:str    -> Function Anotion --- It's Optional 
-# def ask_ok(prompt:str, retries = 4, reminder='Plese Try again!') -> bool:
-#     while True:
-#         reply = input(prompt)
+lists = fib2(100)
+print(lists)
 
-#         if reply in { 'y', 'yes', 'ye'}:
-#             print('Doing the Task')
-#             return True
-#         if reply in { 'n', 'no', 'nop', 'nope'}:
-#             print('Not doing the Task')
-#             return False
+#---------------- Default Arguments ----------------
 
-#         retries = retries - 1
-#         # Base Case 
-#         if retries < 0:
-#             raise ValueError('invalid user response')
+# Prompt:str    -> Function Anotion --- It's Optional 
+def ask_ok(prompt:str, retries = 4, reminder='Plese Try again!') -> bool:
+    while True:
+        reply = input(prompt)
+
+        if reply in { 'y', 'yes', 'ye'}:
+            print('Doing the Task')
+            return True
+        if reply in { 'n', 'no', 'nop', 'nope'}:
+            print('Not doing the Task')
+            return False
+
+        retries = retries - 1
+        # Base Case 
+        if retries < 0:
+            raise ValueError('invalid user response')
         
-#         print(reminder)
+        print(reminder)
 
-# ask_ok('OK to overwrite the file? :- ', 2, '------- Come on, only yes or no! ------')
-
-
-# #---------------- *args and **Kwargs and Markers ----------------
-
-# # Markers:- /, * 
-# def standard_arg(arg):
-#     print(arg)
-# # standard_arg(2)
-# # 2
-# # standard_arg(arg=2)
-# # 2
-
-# def pos_only_arg(arg, /):
-#     print(arg)
-# # pos_only_arg(1)
-# # 1
-# # pos_only_arg(arg=1)
-# # Traceback (most recent call last):
-# #   File "<stdin>", line 1, in <module>
-
-# def kwd_only_arg(*, arg):
-#     print(arg)
-# # Traceback (most recent call last):
-# #   File "<stdin>", line 1, in <module>
-# # TypeError: kwd_only_arg() takes 0 positional arguments but 1 was given
-
-# # kwd_only_arg(arg=3)
-# # 3
+ask_ok('OK to overwrite the file? :- ', 2, '------- Come on, only yes or no! ------')
 
 
-# def combined_example(pos_only, /, standard, *, kwd_only):
-#     print(pos_only, standard, kwd_only)
+#---------------- *args and **Kwargs and Markers ----------------
+
+# Markers:- /, * 
+def standard_arg(arg):
+    print(arg)
+# standard_arg(2)
+# 2
+# standard_arg(arg=2)
+# 2
+
+def pos_only_arg(arg, /):
+    print(arg)
+# pos_only_arg(1)
+# 1
+# pos_only_arg(arg=1)
+# Traceback (most recent call last):
+#   File "<stdin>", line 1, in <module>
+
+def kwd_only_arg(*, arg):
+    print(arg)
+# Traceback (most recent call last):
+#   File "<stdin>", line 1, in <module>
+# TypeError: kwd_only_arg() takes 0 positional arguments but 1 was given
+
+# kwd_only_arg(arg=3)
+# 3
 
 
-# # ---------------------------------
-# #           *args & **kwargs
-# """
-# *args (Positional Arguments): Collects any extra positional arguments into a tuple. The single asterisk * packs the values together, and args is just the standard variable name.
+def combined_example(pos_only, /, standard, *, kwd_only):
+    print(pos_only, standard, kwd_only)
 
-# **kwargs (Keyword Arguments): Collects any extra named (key=value) arguments into a dictionary. The double asterisk ** packs the key-value pairs together, and kwargs is the standard variable name.
-# """
-# def create_profile(username, *hobbies, **details):
-#     print(f"User: {username}")
 
-#     if hobbies:
-#         print(f"Hobbies: {', '.join(hobbies)}")
+# ---------------------------------
+#           *args & **kwargs
+"""
+*args (Positional Arguments): Collects any extra positional arguments into a tuple. The single asterisk * packs the values together, and args is just the standard variable name.
 
-#     for key,value in details.items():
-#         print(f"{key}: {value} ")
+**kwargs (Keyword Arguments): Collects any extra named (key=value) arguments into a dictionary. The double asterisk ** packs the key-value pairs together, and kwargs is the standard variable name.
+"""
+def create_profile(username, *hobbies, **details):
+    print(f"User: {username}")
 
-# create_profile(
-#     "Faiz Shaikh",
-#     "Coding", "Cycling", "Chess",
-#     city="Pune", role="Developer", active=True
-# )
+    if hobbies:
+        print(f"Hobbies: {', '.join(hobbies)}")
+
+    for key,value in details.items():
+        print(f"{key}: {value} ")
+
+create_profile(
+    "Faiz Shaikh",
+    "Coding", "Cycling", "Chess",
+    city="Pune", role="Developer", active=True
+)
 
 
 #------------------- Lambda Functions and Closure ------------------
