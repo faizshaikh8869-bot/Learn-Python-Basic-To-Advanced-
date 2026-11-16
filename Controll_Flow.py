@@ -25,6 +25,7 @@ sample = list(range(5, 105, 5))
 print(sample)
 
 
+
 a = ['Mary', 'had', 'a', 'little','lamb']
 
 for i in range(len(a)):
